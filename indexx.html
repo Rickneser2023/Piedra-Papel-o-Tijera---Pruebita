@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra, Papel o Tijera</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Piedra, Papel o Tijera</h1>
+      <p class="subtitle">¿Puedes vencerme?</p>
+    </header>
+
+    <section class="scoreboard">
+      <div class="score-card">
+        <span class="score-label">Tú</span>
+        <span class="score-number" id="player-score">0</span>
+      </div>
+      <div class="score-card draw">
+        <span class="score-label">Empates</span>
+        <span class="score-number" id="draw-score">0</span>
+      </div>
+      <div class="score-card cpu">
+        <span class="score-label">CPU</span>
+        <span class="score-number" id="cpu-score">0</span>
+      </div>
+    </section>
+
+    <section class="arena">
+      <div class="fighter" id="player-display">
+        <span class="fighter-label">Tú</span>
+        <div class="choice-icon" id="player-choice">❓</div>
+      </div>
+
+      <div class="vs-badge">VS</div>
+
+      <div class="fighter" id="cpu-display">
+        <span class="fighter-label">CPU</span>
+        <div class="choice-icon" id="cpu-choice">❓</div>
+      </div>
+    </section>
+
+    <div class="result-banner" id="result-banner">
+      <span id="result-text">Elige tu jugada</span>
+    </div>
+
+    <section class="controls">
+      <button class="choice-btn" data-choice="piedra" aria-label="Elegir Piedra">
+        <span class="btn-icon">🪨</span>
+        <span class="btn-label">Piedra</span>
+      </button>
+      <button class="choice-btn" data-choice="papel" aria-label="Elegir Papel">
+        <span class="btn-icon">📄</span>
+        <span class="btn-label">Papel</span>
+      </button>
+      <button class="choice-btn" data-choice="tijera" aria-label="Elegir Tijera">
+        <span class="btn-icon">✂️</span>
+        <span class="btn-label">Tijera</span>
+      </button>
+    </section>
+
+    <div class="history-wrapper">
+      <div class="history-header">
+        <span>Historial de rondas</span>
+        <button id="reset-btn">Reiniciar</button>
+      </div>
+      <ol class="history-list" id="history-list">
+        <li class="history-empty">Aún no hay rondas jugadas.</li>
+      </ol>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
